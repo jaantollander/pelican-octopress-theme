@@ -1,9 +1,16 @@
 <aside class="sidebar">
   {% if SIDEBAR_IMAGE %}
   <section>
-	  <img src="{{ SITEURL }}/{{ SIDEBAR_IMAGE }}" alt="{{ SIDEBAR_IMAGE_ALT}}" width="{{SIDEBAR_IMAGE_WIDTH}}"/> 
+	  <img src="{{ SITEURL }}/{{ SIDEBAR_IMAGE }}" alt="{{ SIDEBAR_IMAGE_ALT}}" width="{{SIDEBAR_IMAGE_WIDTH}}"/>
   </section>
   {% endif %}
+
+  {% include '_includes/github.html' %}
+  {% include '_includes/social.html' %}
+  {% include '_includes/links.html' %}
+  {% include '_includes/twitter_sidebar.html' %}
+  {% include '_includes/gplus_sidebar.html' %}
+
   <section>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
@@ -16,7 +23,7 @@
   </section>
   {% if categories %}
   <section>
-      
+
     <h1>Categories</h1>
     <ul id="recent_posts">
       {% for category, articles in categories %}
@@ -24,7 +31,7 @@
       {% endfor %}
     </ul>
   </section>
-  {% endif %} 
+  {% endif %}
 
   <section>
   <h1>Tags</h1>
@@ -33,9 +40,4 @@
   {% endfor %}
   </section>
 
-  {% include '_includes/github.html' %}
-  {% include '_includes/social.html' %}
-  {% include '_includes/links.html' %}
-  {% include '_includes/twitter_sidebar.html' %}
-  {% include '_includes/gplus_sidebar.html' %}
 </aside>
