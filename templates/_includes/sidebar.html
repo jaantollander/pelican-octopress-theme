@@ -3,6 +3,12 @@
   <section>
 	  <img src="{{ SITEURL }}/{{ SIDEBAR_IMAGE }}" alt="{{ SIDEBAR_IMAGE_ALT}}" width="{{SIDEBAR_IMAGE_WIDTH}}"/>
   </section>
+  {% if AUTHOR %}
+    <p><strong>{{ AUTHOR }}</strong></p>
+  {% endif %}
+  {% if SIDEBAR_IMAGE_TEXT %}
+    <p>{{ SIDEBAR_IMAGE_TEXT }}</p>
+  {% endif %}
   {% endif %}
 
   {% include '_includes/github.html' %}
