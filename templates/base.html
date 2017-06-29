@@ -51,6 +51,8 @@
     <link href="{{ SITEURL }}/favicon.png" rel="icon">
   {% endif %}
 
+
+
   <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR}}/css/{{ CSS_FILE }}" media="screen, projection"
         rel="stylesheet" type="text/css">
 
@@ -58,6 +60,19 @@
         rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic"
         rel="stylesheet" type="text/css">
+
+  {% if HEADER_IMAGE %}
+  <style>
+      body > header {
+
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("{{ HEADER_IMAGE }}");
+      background-size: 100%, 100%;
+      background-position: center, center;
+      background-repeat: no-repeat;
+      }
+  </style>
+  {% endif %}
+
   {% if article and article.latex %}
     {{ article.latex }}
   {% endif %}
