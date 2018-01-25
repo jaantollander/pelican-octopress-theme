@@ -7,4 +7,5 @@ dl {margin: 0 0 1.5em 0;}
 dt {font-weight: bold;}
 dd {margin-left: 1.5em;}
 
-@import "partials/table"
+@import "partials/table";
+@import "partials/pandoc_syntax_highlighting";
